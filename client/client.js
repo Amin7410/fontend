@@ -47,7 +47,7 @@ joinBtn.addEventListener('click', () => {
 
     // Kết nối tới server. Thay đổi URL này khi bạn deploy online
     // Ví dụ: wss://your-app.onrender.com
-    socket = new WebSocket('ws://localhost:3001');
+    socket = new WebSocket('wss://draw-game-server.onrender.com'); 
 
     socket.onopen = () => {
         console.log('Connected to server');
