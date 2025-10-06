@@ -1,0 +1,44 @@
+<!-- File: client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw & Guess Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Draw & Guess</h1>
+
+        <!-- Khu vực đăng nhập -->
+        <div id="login-area">
+            <input type="text" id="username-input" placeholder="Enter your name">
+            <input type="text" id="room-id-input" placeholder="Enter Room ID">
+            <button id="join-btn">Join Room</button>
+        </div>
+
+        <!-- Khu vực chính của game -->
+        <div id="game-area" class="hidden">
+            <div class="main-content">
+                <canvas id="drawing-canvas" width="800" height="600"></canvas>
+                <div class="sidebar">
+                    <h3>Players in Room</h3>
+                    <ul id="player-list"></ul>
+                    <h3>Chat</h3>
+                    <div id="chat-box">
+                        <ul id="messages"></ul>
+                    </div>
+                    <form id="chat-form">
+                        <input id="chat-input" autocomplete="off" placeholder="Guess the word..." />
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nạp file JS sau cùng -->
+    <script src="client.js"></script>
+</body>
+</html>
